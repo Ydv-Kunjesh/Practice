@@ -1,0 +1,137 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Worker Page</title>
+</head> -->
+
+<% layout("layouts/boilerplate") %>
+<body>
+    <!-- <h2>Edit Your Listing</h2>
+    <form method="post" action="/listing/<%=listing._id%>/edit?_method=PUT">
+        <input type="text" name="listing[title]" placeholder="Worker Name" value="<%=listing.title%>">
+        <input type="text" name="listing[description]" placeholder="Description" value="<%=listing.description%>">
+        <input type="text" name="listing[image]" placeholder="image Link" value="<%=listing.image%>">
+        <input type="text" name="listing[price]" placeholder="wage" value="<%=listing.price%>">
+        <input type="text" name="listing[location]" placeholder="Your City" value="<%=listing.location%>">
+        <input type="text" name="listing[country]" placeholder="Your Country" value="<%=listing.country%>">
+        <button>Edit</button>
+    </form> -->
+
+
+   
+      
+        <div class="container"> <!-- open container -->
+           <div class="row"> <!--  open row -->
+             
+             <div id="form-header" class="col-12">
+               <h1 id="title">Detail Updation Form</h1>
+             </div>
+           </div> <!--  close row --> 
+          
+          <div class="row"> <!--  open row -->    
+              <div id="form-tagline" class="col-md-4">
+                  <div class="form-tagline">
+                      <i class="fa fa-envelope fa-5x"></i>
+                      <h2>BE Always Updated</h2>
+                      <p id="description" class="lead">Update your listing here</p>
+                  </div>
+              </div>
+             
+                  <div id="form-content" class="col-md-8">
+                
+                <form id="survey-form"  method="post" action="/listing/<%=listing._id%>/edit?_method=PUT"> 
+                                    
+                    <div class="row form-group">
+                       <div class="col-sm-3">
+                        <label id="name-label" class="control-label" for="name">*Name:</label>
+                       </div>
+                      
+                       <div class="input-group col-sm-9">
+                         <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon-name"><i class="fa fa-user"></i></span>
+                         </div>                   
+                         <input id="name" type="text" class="form-control" value="<%=listing.title%>" placeholder="Please Enter Your Name" name="listing[title]" required>
+                       </div>
+                    </div>
+
+                    <div class="row form-group">
+                       <div class="col-sm-3">
+                        <label id="name-label" class="control-label" for="name">*Wage:</label>
+                       </div>
+                      
+                       <div class="input-group col-sm-9">
+                         <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon-name"><i class="fa fa-user"></i></span>
+                         </div>                   
+                         <input id="name" type="text" class="form-control" value="<%=listing.price%>" placeholder="Please Enter Your wage" name="listing[price]"  required>
+                          
+                       </div>
+                    </div>
+                    <div class="row form-group">
+                       <div class="col-sm-3">
+                        <label id="name-label" class="control-label" for="name">*City:</label>
+                       </div>
+                      
+                       <div class="input-group col-sm-9">
+                         <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon-name"><i class="fa fa-user"></i></span>
+                         </div>                   
+                         <input id="name" type="text" class="form-control" value="<%=listing.location%>" placeholder="Please Update Your City" name="listing[location]"  required>
+                       </div>
+                    </div>
+                    <div class="row form-group">
+                       <div class="col-sm-3">
+                        <label id="name-label" class="control-label" for="name">*Country:</label>
+                       </div>
+                      
+                       <div class="input-group col-sm-9">
+                         <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon-name"><i class="fa fa-user"></i></span>
+                         </div>                   
+                         <input id="name" type="text" class="form-control" value="<%=listing.country%>" placeholder="Please Update Your Country"name="listing[country]"  required>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                       <div class="col-sm-3">
+                        <label id="name-label" class="control-label" for="name">*Image URL:</label>
+                       </div>
+                      
+                       <div class="input-group col-sm-9">
+                         <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon-name"><i class="fa fa-user"></i></span>
+                         </div>                   
+                         <input id="name" type="text" class="form-control"  placeholder="Update your Url" name="listing[image]"  value="<%=listing.image%>" required >
+                        </div>
+                      </div> 
+                    <div class="row form-group">
+                       <div class="col-sm-3">
+                        <label id="name-label" class="control-label" for="name">*Description:</label>
+                       </div>
+                      
+                       <div class="input-group col-sm-9">
+                         <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon-name"><i class="fa fa-user"></i></span>
+                         </div>                   
+                         <input id="name" type="text" class="form-control"  placeholder="Update your Description" name="listing[description]"  value="<%=listing.description%>" required >
+                        
+                        </div>
+                      </div> 
+                     <br>
+                    
+               
+                  <hr>                     
+                  <div class="form-group row">
+                    <div class="col-sm-12 submit-button">
+                      <button type="submit" id="submit" class="btn btn-default" aria-pressed="true">Submit Updation </button>
+                    </div>
+                  </div>
+                                   
+                </form> 
+                </div> 
+                   
+          </div> 
+        </div>   
+</body>

@@ -1,0 +1,41 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workers</title>
+</head> -->
+<% layout("layouts/boilerplate") %>
+
+<body>
+    <h3>All Workers</h3>
+    <form method="GET" action="/listings/new">
+        <!-- <button>New Worker</button> -->
+    </form>
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 mx-md-n5">
+        <% for(let worker of allListings) { %>
+            <a href="/listing/<%=worker._id%>" class="worker-list">
+            <div class="card" style="width: 20rem;">
+                <img class="card-img-top" src="<%=worker.image%>" alt="Worker Image" style="height: 20rem;" >
+                <div class="card-img-overlay">Workers</div>
+                <div class="card-body">
+                  <p class="card-text">
+                 <b><%= worker.title %> </b> <br />
+                    &#x20B9;<%= worker.price %>/Day
+                  </p>
+                </div>
+              </div>
+            </a>
+              <% } %>
+    </div>
+    
+    <ul>
+        <% for(let worker of allListings) { %>
+
+            <li><a href="/listing/<%=worker._id%>"><%= worker.title %></li> </a>
+            <!-- <a href="/listing/<%=worker._id%>/edit">Edit Your Worker</a> -->
+            
+        </ul>
+    <% } %>
+</body>
+<!-- </html> -->

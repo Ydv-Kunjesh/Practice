@@ -1,0 +1,79 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Detail View</title>
+</head> -->
+<% layout("layouts/boilerplate") %>
+<body>
+    <div class="container">
+    <div class="row">
+        <div class="col-8 offset-2 mt-3">
+        <h3><%= listing.title %></h3>
+    </div>
+    <div class=" Card col-6 offset-2">
+       <img src="<%= listing.image %>" class="Card-img-top show-img">
+       
+       <div class="card-body">
+        <p class="card-text offset-3" style="font-family: algerian;"><%= listing.title %></p>
+       </div>
+    </div>
+    </div>
+    <br>
+    <div class="show-desc">
+    <li>Role: <%= listing.description %></li>
+    <li>Rate: &#x20B9;<%= listing.price.toLocaleString('en-IN') %></li>
+    <li>Location: <%= listing.location %></li>
+    <li>Country: <%= listing.country %></li>
+   
+    </div>
+    <br>
+    <button><a href="/listing/<%=listing._id%>/edit">Edit Your Worker</a></button>
+    <form method="POST" action="/listing/<%= listing._id %>/delete?_method=DELETE"> 
+        <br>
+        <button>Delete your listing</button>
+    </form>
+    <!-- Review Form  -->
+    <hr>
+    <div class="form-review">
+    <div class="review-form">
+        <h3>Write your feeling about us.</h3>
+        <form method="post" action="/listings/<%= listing._id %>/reviews">
+        <div class="mb-2 mt-3">
+            <label for="rating" class="form-label">Rating</label>
+            <input class="form-range" type="range" name="review[rating]" min="1" max="5" id="">
+        </div>
+        <div class="mb-2 mt-3">
+            <label for="review" class="form-label">Review</label>
+            <textarea required name="review[comment]" id="" cols="10" rows="10" class="form-control"></textarea>
+        </div>
+        <button class="btn btn-dark mt-2">Submit</button>
+        </form>
+</div>
+    <!-- review card  -->
+    <div class="review-card">
+        <% for(review of listing.reviews ){ %>
+            <div class="review-cards">
+            Time: <%= review.createdAt.toString().split(" ")[4] %><br>
+          <%= review.rating %> Star Rated <br>
+          <%= review.comment %>  <br>
+          <form method="post"action="/listings/<%= listing._id %>/reviews/<%= review._id%>?_method=DELETE">
+            <button class="btn btn-danger btn-sm " type="submit">Delete</button>
+          </form>
+        </div>
+          <%  } %>
+    </div>
+
+</div>
+
+</div>
+
+
+
+
+        
+</div>
+</div>
+</body>
+<!-- </html> -->

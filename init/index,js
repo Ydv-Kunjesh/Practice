@@ -1,0 +1,14 @@
+const mongo = require('mongoose');
+const initData = require('./data.js')
+const Listing = require('../models/listing.js')
+
+mongo.connect('mongodb://127.0.0.1:27017/Project').then((res)=>{console.log(`Database Connected`);}).catch((err)=>{console.log(err);})  
+
+const initDb = async()=>{
+    await Listing.deleteMany({})
+    await Listing.insertMany(initData.data)
+    console.log('Data inserted')
+
+}
+
+initDb()

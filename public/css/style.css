@@ -1,0 +1,198 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: #212121;  
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    flex: 1;
+}
+
+
+.navbar{
+    height: 5rem;
+    position: fixed;
+    background-color: white;
+}
+.nav-link{
+    color: #222222 !important;
+}
+
+/* Footer */
+.f-info-links a:hover{
+text-decoration: none;
+color: #131212;
+}
+
+.f-info-links{
+    width: 100%;
+}
+.f-info-social{
+    /* display: flex;
+    justify-content: space-evenly; */
+    width: 100%;
+    font-size: 1.2rem;
+
+}
+
+.f-info{
+    display: flex;
+    height: 5rem;
+    background-color: rgba(133, 165, 85, 0.247);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    text-align: center;
+}
+
+/* cards */
+.card{
+    border: none;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.card-body{
+    padding: 0 !important;
+}
+.card-text p {
+    font-weight: 400;
+}
+.worker-list{
+    text-decoration: none;
+}
+
+/* overlay effects */
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card:hover .card-img-overlay{
+    opacity: 0.2;
+    background-color:white;
+}
+
+/* EDIT FORM CSS */
+.container{
+    margin-bottom:5%;
+  }
+  
+  #form-header{
+    margin-top:5%;
+    text-align:center;
+  }
+  
+  #form-tagline{
+    background: #ff6d00;
+    border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+    color:#ffffff;
+    margin-top:5%;
+    padding: 4%;
+    text-align:left;
+  }
+  
+  #form-tagline .fa{
+    margin-bottom:15%;
+  }
+  
+  #form-tagline h2 {
+    margin-bottom:15%;
+  }
+  
+  #form-content{
+    background: #f4f4f4;
+    border-top-right-radius: 0.5rem;
+      border-bottom-right-radius:0.5rem;
+    margin-top:5%;
+    padding: 3%;
+  }
+  
+  .form-group{
+    margin-top:5%;
+  }
+  
+  .contact{
+      padding: 4%;
+      height: 400px;
+  }
+  
+  .control-label{
+    font-size:16px;
+      font-weight:600;
+  }
+  
+  div .submit-button{
+    margin-top:3%;
+    text-align:right;
+  }
+  
+  button#submit{
+    white-space: normal;
+    width:auto;
+      background: #ff6d00;
+      color: #ffffff;
+    font-weight: 600;
+      width: 25%;
+  }
+
+/* Single Worker */
+
+.show-img{
+  width: 30vw;
+  height: 40vh;
+  border-radius: 3rem;
+}
+.show-desc li{
+ list-style: none;
+ 
+}
+
+
+/* Review  card Css */
+
+.form-review{
+  display: flex;
+  flex-direction:row;
+  gap: 50px;
+}
+.review-form{
+  width: auto;
+  background-color: rgba(92, 170, 167, 0.256);
+  height: 30rem;
+  font-family: algerian;
+
+}
+
+.review-card{
+  width: 70vw;
+}
+.review-card{
+  /* background-color: rgb(158, 95, 126); */
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* background-color: aquamarine; */
+            height: auto;
+            /* width: 80vw; */
+            /* margin: auto; */
+            align-content: space-around;  
+            justify-content: space-around; 
+}
+.review-cards{
+            margin: 1%;
+            padding: 2%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: bisque;
+            border-radius: 5%;
+}
